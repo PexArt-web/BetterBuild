@@ -133,7 +133,7 @@ const Signup = () => {
               disabled={true}
               label={
                 navigation.state === "submitting"
-                  ? "Please wait..."
+                  ? "Please wait...."
                   : "Register"
               }
             />
