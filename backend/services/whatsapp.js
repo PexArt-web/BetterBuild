@@ -1,3 +1,4 @@
+require("dotenv").config();
 const PHONE_NUMBER_ID = process.env.WHATSAPP_PHONE_NUMBER_ID;
 const ACCESS_TOKEN = process.env.WHATSAPP_ACCESS_TOKEN;
 const WHATSAPP_VERSION = process.env.WHATSAPP_API_VERSION;
