@@ -4,7 +4,7 @@ import { signUpSchema } from "../Schemas/signUpSchema";
 
 export const signupAction = async ({ request }) => {
   const formData = await request.formData();
-  const username = formData.get("username");
+  const username = formData.get("");
   const email = formData.get("email");
   const password = formData.get("password");
   // const uniqueId = uuidv4()

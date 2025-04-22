@@ -36,7 +36,7 @@ const Signup = () => {
           className="w-48 h-auto mx-auto mb-5 mt-5"
         />
 
-        <div className="bg-white rounded-lg shadow-lg p-10 w-full max-w-md">
+        <div className="bg-white rounded-lg shadow-lg p-10 w-full max-w-md mb-5">
           <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">
             Create a Vendor Account
           </h2>
@@ -89,6 +89,21 @@ const Signup = () => {
                   "w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 }
                 placeholder={""}
+              />
+            </div>
+
+            <div className="mb-4">
+              <label className="block text-gray-600 mb-2" htmlFor="email">
+                WhatsApp Phone no*
+              </label>
+              <SharedInput
+                type={"text"}
+                id={"text"}
+                name={"text"}
+                className={
+                  "w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                }
+                placeholder={"+234"}
               />
             </div>
 
@@ -165,7 +180,7 @@ const Signup = () => {
             )}
           </Form>
 
-          <div className="mt-6 text-gray-950  text-md text-start space-y-3">
+          <div className="mt-6 text-gray-950  text-md text-start space-y-3 ">
             <p className="font-medium">Sign up today and you’ll be able to:</p>
             <ul className="text-left max-w-md mx-auto space-y-2">
               <li className="flex items-start gap-2">
