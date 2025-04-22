@@ -1,6 +1,6 @@
 export const signupService =  async (firstname, surname, email, phoneNumber , password) =>  {
     try {
-        const response =  await fetch("http://localhost:4000/api/user/signup", { 
+        const response =  await fetch("http://localhost:4000/api/user/register", { 
             method: 'POST',
             headers : { "content-type" : "application/json"} , 
             body : JSON.stringify({firstname, surname, email, phoneNumber , password})
