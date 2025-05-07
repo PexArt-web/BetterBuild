@@ -1,19 +1,37 @@
 import { signupService } from "../../services/Auth/signupService";
-import { signUpSchema } from "../Schemas/signUpSchema";
+
 // import {v4 as uuidv4} from "uuid"
 
 export const signupAction = async ({ request }) => {
   const formData = await request.formData();
-  const username = formData.get("");
+  const firstname = formData.get("firstname");
+  const surname = formData.get("surname");
   const email = formData.get("email");
+  const phoneNumber = formData.get("phoneNumber");
   const password = formData.get("password");
+  const confirmPassword = formData.get("confirmPassword");
   // const uniqueId = uuidv4()
   try {
-    signUpSchema.parse({ username, email, password });
-    if (!username || !email || !password) {
-      throw Error("All fields are required front");
+    if (
+      !firstname ||
+      !surname ||
+      !phoneNumber ||
+      !email ||
+      !password ||
+      !confirmPassword
+    ) {
+      throw Error("All fields are required ");
     }
-    const data = await signupService(username, email, password);
+    if (password !== confirmPassword) {
+      throw Error("Passwords do not match");
+    }
+    const data = await signupService(
+      firstname,
+      surname,
+      email,
+      phoneNumber,
+      password
+    );
     return { user: data };
   } catch (error) {
     // error.message = "TypeError: Failed to fetch"

@@ -93,17 +93,17 @@ const Signup = () => {
             </div>
 
             <div className="mb-4">
-              <label className="block text-gray-600 mb-2" htmlFor="email">
+              <label className="block text-gray-600 mb-2" htmlFor="text">
                 WhatsApp Phone no*
               </label>
               <SharedInput
                 type={"text"}
                 id={"text"}
-                name={"text"}
+                name={"phoneNumber"}
                 className={
                   "w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 }
-                placeholder={"+234"}
+                placeholder={"234"}
               />
             </div>
 
@@ -131,7 +131,7 @@ const Signup = () => {
                 <SharedInput
                   type={"password"}
                   id={"password"}
-                  name={"password"}
+                  name={"confirmPassword"}
                   className={
                     "w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                   }
@@ -144,8 +144,8 @@ const Signup = () => {
               className={
                 "w-full py-3 bg-yellow-500 text-2md text-black rounded-lg font-semibold hover:bg-black transition duration-200 hover:text-white"
               }
-              // disabled={navigation.state === "submitting"}
-              disabled={true}
+              disabled={navigation.state === "submitting"}
+              // disabled={true}
               label={
                 navigation.state === "submitting"
                   ? "Please wait...."

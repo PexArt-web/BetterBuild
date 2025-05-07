@@ -11,7 +11,7 @@ const whatsappService = async (firstname, surname, phoneNumber) => {
   if (!firstname || !surname || !phoneNumber) {
     throw new Error("All fields are required");
   }
-  const message = `Hello ${firstname} ${surname}, you don login successfully!`;
+  const message = `Hello ${firstname} ${surname}, congratulations you've successfully login!`;
   try {
     const response = await fetch(API_URL, {
       method: "POST",
