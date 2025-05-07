@@ -15,8 +15,8 @@ export const signupAction = async ({ request }) => {
     if (
       !firstname ||
       !surname ||
-      !phoneNumber ||
       !email ||
+      !phoneNumber ||
       !password ||
       !confirmPassword
     ) {
@@ -38,6 +38,7 @@ export const signupAction = async ({ request }) => {
     //   ? (error.message =
     //       "Network error: Unable to connect. Please check your internet connection and try again.")
     //   : error.message;
+    console.log("Error in signupAction:", error);
     return { error: error.message };
   }
 };

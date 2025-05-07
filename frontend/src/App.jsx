@@ -12,7 +12,7 @@ function App() {
       createRoutesFromElements(
         <Route path="/">
           <Route index action={signupAction} element={<Signup/>} />
-          {/* <Route path="contact" element={<h1>Contact</h1>} /> */}
+         
         </Route>
       )
     )
